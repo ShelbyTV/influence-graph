@@ -1,0 +1,12 @@
+{
+    "name": "influence-graph"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+       "express" : "=2.5.6"
+      , "mongoat" : "git+ssh://git@github.com:ShelbyTV/mongoat.git"
+      , "request" : "=2.9.100"
+      , "klout-api-node" : "git+ssh://git@github.com:mkrecny/klout-api-node.git"
+  }
+  , "main": "./index.js"
+}
