@@ -2,12 +2,20 @@ var db_confs = {
   'development' : {
     db_name : 'nos-development',
     host : 'localhost',
-    port : 27017
+    port : 27017,
+    redis : {
+      host : '127.0.0.1',
+      port : 6379
+    }
   },
   'production' : {
     db_name : 'nos-production',
     host : '10.183.192.15',
-    port : 27018
+    port : 27018,
+    redis : {
+      host : '127.0.0.1',
+      port : 6379
+    }
   }
 };
 

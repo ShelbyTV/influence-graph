@@ -7,6 +7,7 @@
       , "mongoat" : "git+ssh://git@github.com:ShelbyTV/mongoat.git"
       , "request" : "=2.9.100"
       , "klout-api-node" : "git+ssh://git@github.com:mkrecny/klout-api-node.git"
+      , "redis" : "=0.7.1"
   }
   , "main": "./index.js"
 }

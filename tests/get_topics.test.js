@@ -11,7 +11,7 @@ var build_num_users = 100;
 var TOPICS = ['developers', 'las vegas'];
 
 var build_cb = function(e, graph){
-  var topics = get_topics(graph);    
+  get_topics(graph);    
   console.log('TOPICS', topics);
   if (topics.length){
     console.log('PASS!');
