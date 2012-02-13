@@ -6,7 +6,8 @@ var db_confs = {
     redis : {
       host : '127.0.0.1',
       port : 6379
-    }
+    },
+    max_users_chunk : 1
   },
   'production' : {
     db_name : 'nos-production',
@@ -15,7 +16,8 @@ var db_confs = {
     redis : {
       host : '127.0.0.1',
       port : 6379
-    }
+    },
+    max_users_chunk : 1000
   }
 };
 
