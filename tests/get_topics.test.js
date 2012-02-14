@@ -1,24 +1,15 @@
 var db_conf = require('../conf/db.js');
 var mongoat = require('mongoat')(db_conf.db_name, db_conf.host, db_conf.port);
-var build = require('../lib/build.js');
 var get_topics = require('../lib/get_topics.js');
-var build_num_users = 100;
+var redis_conf = require('../conf/db.js').redis;
+var redis = require('redis').createClient(redis_conf.port, redis_conf.host);
 
 /*
  * Get Topics functional test
  */
 
-var TOPICS = ['developers', 'las vegas'];
-
-var build_cb = function(e, graph){
-  get_topics(graph);    
-  console.log('TOPICS', topics);
-  if (topics.length){
-    console.log('PASS!');
-  }
-  process.exit();
-};
-
-mongoat.db.open(function(e, db_client){
-  build(db_client, build_num_users, mongoat.do_query, build_cb);
-});
+get_topics(redis, function(e, topics){
+  console.log(topics);
+  console.log(topics.length, 'topics');
+});    
+  
