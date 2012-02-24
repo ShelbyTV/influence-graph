@@ -11,6 +11,7 @@ var redis = require('redis').createClient(redis_conf.port, redis_conf.host);
 var topics = ['developers', 'las vegas'];
 
 query(redis, topics, function(e, result){
+  console.log(result);
   if (Object.keys(result).length === topics.length){
     console.log('PASS');
   }

@@ -37,8 +37,9 @@ app.configure('production', function(){
  */
 
 app.get('/query', routes.query);
+app.get('/stats', routes.stats);
 app.get('/topics', routes.topics);
-app.get('/rebuild', routes.rebuild);
+//app.get('/rebuild', routes.rebuild);
 
 app.listen(server_conf.port);
 console.log("Influencer graph listening on port %d in %s mode", app.address().port, app.settings.env);
